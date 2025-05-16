@@ -19,7 +19,7 @@ public class App {
         testAppender.start();
 
         logger.info("Initializing Log4j 1.2 API...");
-        org.apache.log4j.LogManager.getLogger(App.class);
+        org.apache.log4j.LogManager.getLogger("org.example.OtherClass");
         logger.info("Log4j 1.2 API initialized.");
 
         System.out.printf("Recorded %,d events (expected 2)%n", testAppender.getLogEvents());
