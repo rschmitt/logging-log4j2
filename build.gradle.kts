@@ -8,12 +8,11 @@ repositories {
     mavenLocal()
 }
 
-val ver = System.getenv("VER") ?: "2.24.3"
+val ver = System.getenv("VER") ?: "2.25.1"
 
 dependencies {
     implementation("org.apache.logging.log4j:log4j-api:$ver")
-    implementation("org.apache.logging.log4j:log4j-core:$ver")
-    implementation("org.apache.logging.log4j:log4j-1.2-api:$ver")
+    runtimeOnly("org.apache.logging.log4j:log4j-core:$ver")
 
     testImplementation(libs.junit.jupiter)
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
